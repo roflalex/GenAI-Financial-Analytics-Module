@@ -77,12 +77,12 @@ def explain_next_month_forecast(forecaster_path: str = 'evaluation/best_forecast
     top_negative = [f for f in feature_impacts if f['shap_impact_eur'] < 0][:4]
 
     # Format text explanation
-    pos_desc = [f"{f['label']} (+?{f['shap_impact_eur']:.2f})" for f in top_positive]
-    neg_desc = [f"{f['label']} (-?{abs(f['shap_impact_eur']):.2f})" for f in top_negative]
+    pos_desc = [f"{f['label']} (+€{f['shap_impact_eur']:.2f})" for f in top_positive]
+    neg_desc = [f"{f['label']} (-€{abs(f['shap_impact_eur']):.2f})" for f in top_negative]
 
     summary_text = (
-        f"Baseline historical average spending is ?{base_val:.2f}. "
-        f"Next month is forecasted at ?{pred_val:.2f} (a net difference of ?{pred_val - base_val:+.2f}). "
+        f"Baseline historical average spending is €{base_val:.2f}. "
+        f"Next month is forecasted at €{pred_val:.2f} (a net difference of €{pred_val - base_val:+.2f}). "
     )
     if pos_desc:
         summary_text += f"Primary factors driving predicted spending upward: {', '.join(pos_desc)}. "

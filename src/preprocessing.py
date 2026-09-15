@@ -154,9 +154,9 @@ def generate_messy_transactions(n_transactions: int = 3600, seed: int = 42) -> p
         if amt_fmt_choice < 0.45:
             raw_amount_str = f"-{amount_val:.2f}"
         elif amt_fmt_choice < 0.70:
-            raw_amount_str = f"-?{amount_val:.2f}"
+            raw_amount_str = f"-€{amount_val:.2f}"
         elif amt_fmt_choice < 0.85:
-            raw_amount_str = f"?{amount_val:.2f}"
+            raw_amount_str = f"€{amount_val:.2f}"
         elif amt_fmt_choice < 0.95:
             raw_amount_str = f"{amount_val:.2f}"
         else:
@@ -226,7 +226,7 @@ def parse_inconsistent_date(date_val):
 
 def parse_inconsistent_amount(amt_val) -> float:
     """
-    Cleans messy currency strings (e.g. '-?48.72', '48.72 EUR', '-50.00')
+    Cleans messy currency strings (e.g. '-€48.72', '48.72 EUR', '-50.00')
     and extracts a standardized positive float representing expense amount.
     """
     if pd.isna(amt_val):
@@ -236,7 +236,7 @@ def parse_inconsistent_amount(amt_val) -> float:
         return abs(float(amt_val))
 
     s = str(amt_val).strip()
-    s_cleaned = re.sub(r'[?$?A-Za-z\s,]', '', s)
+    s_cleaned = re.sub(r'[€$£?A-Za-z\s,]', '', s)
 
     try:
         val = float(s_cleaned)

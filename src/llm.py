@@ -184,28 +184,28 @@ class FinancialAnalyst:
         direction = "higher than" if delta_3m > 0 else "lower than"
 
         increasing_cats = [
-            f"{c} (+?{d['delta_eur']:.2f})" for c, d in cats.items() if d['delta_eur'] > 15
+            f"{c} (+€{d['delta_eur']:.2f})" for c, d in cats.items() if d['delta_eur'] > 15
         ]
         decreasing_cats = [
-            f"{c} (-?{abs(d['delta_eur']):.2f})" for c, d in cats.items() if d['delta_eur'] < -15
+            f"{c} (-€{abs(d['delta_eur']):.2f})" for c, d in cats.items() if d['delta_eur'] < -15
         ]
 
         top_anom_str = ""
         if anoms:
             a = anoms[0]
-            top_anom_str = f" The largest detected anomaly was a ?{a['amount']:.2f} payment at {a['merchant']} ({a['category']}), well outside its typical range of {a['expected_range']}."
+            top_anom_str = f" The largest detected anomaly was a €{a['amount']:.2f} payment at {a['merchant']} ({a['category']}), well outside its typical range of {a['expected_range']}."
 
         top_shap_driver = ""
         if shap.get('top_positive_drivers'):
             d = shap['top_positive_drivers'][0]
-            top_shap_driver = f" According to SHAP feature attribution, the strongest upward driver is {d['label']} (+?{d['shap_impact_eur']:.2f})."
+            top_shap_driver = f" According to SHAP feature attribution, the strongest upward driver is {d['label']} (+€{d['shap_impact_eur']:.2f})."
 
         narrative = (
             f"**Executive Forecast Summary:**\n"
-            f"Your predicted spending for next month is **?{pred_tot:,.2f}**, which is **?{abs(delta_3m):,.2f} {direction}** your 3-month rolling average of ?{avg_3m:,.2f} (80% confidence interval: ?{fc.get('lower_bound_80ci', 0):,.2f} ? ?{fc.get('upper_bound_80ci', 0):,.2f}).\n\n"
+            f"Your predicted spending for next month is **€{pred_tot:,.2f}**, which is **€{abs(delta_3m):,.2f} {direction}** your 3-month rolling average of €{avg_3m:,.2f} (80% confidence interval: €{fc.get('lower_bound_80ci', 0):,.2f} - €{fc.get('upper_bound_80ci', 0):,.2f}).\n\n"
             f"**Category & Behavioral Drivers:**\n"
-            f"? **Upward pressures:** {', '.join(increasing_cats) if increasing_cats else 'Spending across most categories remains stable.'}\n"
-            f"? **Downward savings:** {', '.join(decreasing_cats) if decreasing_cats else 'No major category reductions detected.'}\n"
+            f"- **Upward pressures:** {', '.join(increasing_cats) if increasing_cats else 'Spending across most categories remains stable.'}\n"
+            f"- **Downward savings:** {', '.join(decreasing_cats) if decreasing_cats else 'No major category reductions detected.'}\n"
             f"{top_shap_driver}\n\n"
             f"**Risk & Anomaly Radar:**\n"
             f"The ML anomaly detector flagged {ctx.get('anomaly_summary', {}).get('total_anomalies_detected', 0)} atypical transactions across your history.{top_anom_str}"
@@ -226,7 +226,7 @@ class FinancialAnalyst:
         # 1. Query: 'biggest purchases' / 'largest transactions'
         if any(k in q for k in ['biggest', 'largest', 'highest', 'top purchase', 'expensive']):
             purchases = ctx.get('behavioural_metrics', {}).get('top_3_all_time_purchases', [])
-            lines = [f"{i+1}. **?{p['amount']:.2f}** ? {p['clean_merchant']} *({p['category']})* on {p['date']}"
+            lines = [f"{i+1}. **€{p['amount']:.2f}** - {p['clean_merchant']} *({p['category']})* on {p['date']}"
                      for i, p in enumerate(purchases)]
             return (
                 f"Here are your **3 biggest historical purchases**:\n\n"
@@ -242,9 +242,9 @@ class FinancialAnalyst:
             pct = b.get('weekend_share_pct', 0.0)
             return (
                 f"**Weekend vs. Weekday Spending Breakdown (Recent Month):**\n\n"
-                f"? **Weekdays:** ?{wd:,.2f}\n"
-                f"? **Weekends:** ?{we:,.2f}\n"
-                f"? **Weekend Share:** **{pct:.1f}%** of total monthly spending.\n\n"
+                f"- **Weekdays:** €{wd:,.2f}\n"
+                f"- **Weekends:** €{we:,.2f}\n"
+                f"- **Weekend Share:** **{pct:.1f}%** of total monthly spending.\n\n"
                 f"Dining & Takeaway and Shopping account for the majority of your weekend expenditure surges."
             )
 
@@ -252,11 +252,11 @@ class FinancialAnalyst:
         if any(k in q for k in ['why is', 'why did', 'higher', 'increase', 'driving', 'factors']):
             shap = ctx.get('shap_drivers', {})
             pos = shap.get('top_positive_drivers', [])
-            pos_text = "\n".join([f"? **{p['label']}**: added **+?{p['shap_impact_eur']:.2f}** to forecast" for p in pos])
+            pos_text = "\n".join([f"- **{p['label']}**: added **+€{p['shap_impact_eur']:.2f}** to forecast" for p in pos])
             fc = ctx.get('forecast', {})
             return (
                 f"**Why Your Forecasted Spending Is Higher:**\n\n"
-                f"Next month is projected at **?{fc.get('predicted_total', 0):,.2f}** (a net increase of **+?{fc.get('mom_change_eur', 0):,.2f}** month-over-month).\n\n"
+                f"Next month is projected at **€{fc.get('predicted_total', 0):,.2f}** (a net increase of **+€{fc.get('mom_change_eur', 0):,.2f}** month-over-month).\n\n"
                 f"Based on **SHAP Tree Explainer feature attributions**, the main causes are:\n"
                 f"{pos_text}\n\n"
                 f"{shap.get('summary', '')}"
@@ -271,21 +271,21 @@ class FinancialAnalyst:
             if diff <= 0:
                 return (
                     f"**Yes, you are on track!**\n\n"
-                    f"Your predicted spending next month is **?{pred:,.2f}**, which is **?{abs(diff):,.2f} below** your target budget of **?{budget_val:,.2f}**."
+                    f"Your predicted spending next month is **€{pred:,.2f}**, which is **€{abs(diff):,.2f} below** your target budget of **€{budget_val:,.2f}**."
                 )
             else:
                 return (
-                    f"**Budget Alert:** You are currently **not on track** to stay under ?{budget_val:,.2f}.\n\n"
-                    f"? **Predicted Spending:** ?{pred:,.2f}\n"
-                    f"? **Over-budget by:** **?{diff:,.2f}** (or {round((diff/budget_val)*100, 1)}% above budget)\n"
-                    f"? **Recommended Action:** Review recent weekend dining and shopping surges to bring your forecast within range."
+                    f"**Budget Alert:** You are currently **not on track** to stay under €{budget_val:,.2f}.\n\n"
+                    f"- **Predicted Spending:** €{pred:,.2f}\n"
+                    f"- **Over-budget by:** **€{diff:,.2f}** (or {round((diff/budget_val)*100, 1)}% above budget)\n"
+                    f"- **Recommended Action:** Review recent weekend dining and shopping surges to bring your forecast within range."
                 )
 
         # 5. Query: 'Where am I spending the most?' / 'Top category'
         if any(k in q for k in ['where', 'most money', 'biggest category', 'top category', 'breakdown']):
             cats = ctx.get('category_dynamics', {})
             sorted_cats = sorted(cats.items(), key=lambda x: x[1]['forecast'], reverse=True)
-            lines = [f"{i+1}. **{c}**: ?{d['forecast']:,.2f} *(recent avg: ?{d['recent_3m_average']:,.2f})*"
+            lines = [f"{i+1}. **{c}**: €{d['forecast']:,.2f} *(recent avg: €{d['recent_3m_average']:,.2f})*"
                      for i, (c, d) in enumerate(sorted_cats[:5])]
             return (
                 f"**Top Spending Categories (Forecasted Next Month):**\n\n"

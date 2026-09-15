@@ -116,11 +116,11 @@ def detect_anomalies(df_path: str = 'data/processed/cleaned_transactions.csv',
         med = b.get('median', 0.0)
         exp_max = b.get('expected_max', 0.0)
         mult = row['amount'] / med if med > 0 else 0
-        return (f"Amount ?{row['amount']:.2f} is {mult:.1f}x typical {cat} median (?{med:.2f}). "
-                f"Exceeds typical ceiling of ?{exp_max:.2f}.")
+        return (f"Amount €{row['amount']:.2f} is {mult:.1f}x typical {cat} median (€{med:.2f}). "
+            f"Exceeds typical ceiling of €{exp_max:.2f}.")
 
     anomalies_df['expected_range'] = anomalies_df['category'].map(
-        lambda c: f"?{baselines.get(c, {}).get('expected_min', 0):.2f} ? ?{baselines.get(c, {}).get('expected_max', 0):.2f}"
+        lambda c: f"€{baselines.get(c, {}).get('expected_min', 0):.2f} - €{baselines.get(c, {}).get('expected_max', 0):.2f}"
     )
     anomalies_df['severity'] = np.where(anomalies_df['anomaly_score'] > 0.80, 'High', 'Medium')
     anomalies_df['explanation'] = anomalies_df.apply(build_explanation, axis=1)

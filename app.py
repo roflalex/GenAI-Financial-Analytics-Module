@@ -18,7 +18,7 @@ from src.llm import FinancialAnalyst
 
 st.set_page_config(
     page_title="AI Personal Finance Forecasting & Insights",
-    page_icon="??",
+    page_icon="€",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -102,24 +102,24 @@ except Exception as e:
 
 # Sidebar Navigation & Settings
 with st.sidebar:
-    st.title("?? AI Finance Studio")
+    st.title("AI Finance Studio")
     st.markdown("*ML-driven analysis & Grounded GenAI insights*")
     st.markdown("---")
 
     nav_choice = st.radio(
         "Navigation",
         [
-            "?? Executive Overview",
-            "?? Category Deep-Dive",
-            "?? Anomaly Radar",
-            "?? Model Arena & Explainability",
-            "?? AI Financial Analyst (Chat)",
-            "?? Data Management"
+            "Executive Overview",
+            "Category Deep-Dive",
+            "Anomaly Radar",
+            "Model Arena & Explainability",
+            "AI Financial Analyst (Chat)",
+            "Data Management"
         ]
     )
 
     st.markdown("---")
-    st.markdown("### ?? GenAI Engine Settings")
+    st.markdown("### GenAI Engine Settings")
     api_key_input = st.text_input(
         "OpenAI API Key (Optional)",
         type="password",
@@ -132,7 +132,7 @@ with st.sidebar:
         st.info("Operating in Offline Mode (Grounded Local Analyst).")
 
     st.markdown("---")
-    st.caption("AI Personal Finance Studio v1.0 ? Built with Streamlit, Scikit-Learn, XGBoost & SHAP")
+    st.caption("AI Personal Finance Studio v1.0 - Built with Streamlit, Scikit-Learn, XGBoost & SHAP")
 
 
 # Initialize Analyst
@@ -142,7 +142,7 @@ analyst = FinancialAnalyst(api_key=api_key_input if api_key_input else None)
 # ----------------------------------------------------
 # TAB 1: EXECUTIVE OVERVIEW
 # ----------------------------------------------------
-if nav_choice == "?? Executive Overview":
+if nav_choice == "Executive Overview":
     st.header("Executive Financial Overview & Forecast")
     st.markdown("Real-time spending intelligence, machine learning forecasting, and AI synthesis.")
 
@@ -162,7 +162,7 @@ if nav_choice == "?? Executive Overview":
         st.markdown(f"""
         <div class="metric-card">
             <div class="metric-title">Previous Month Spending</div>
-            <div class="metric-value">?{last_spend:,.2f}</div>
+            <div class="metric-value">€{last_spend:,.2f}</div>
             <div class="metric-delta">Actual recorded total</div>
         </div>
         """, unsafe_allow_html=True)
@@ -171,8 +171,8 @@ if nav_choice == "?? Executive Overview":
         st.markdown(f"""
         <div class="metric-card">
             <div class="metric-title">Predicted Next Month</div>
-            <div class="metric-value">?{pred_spend:,.2f}</div>
-            <div class="metric-delta {delta_class}">{sign}?{mom_delta:,.2f} ({sign}{mom_pct:.1f}% MoM)</div>
+            <div class="metric-value">€{pred_spend:,.2f}</div>
+            <div class="metric-delta {delta_class}">{sign}€{mom_delta:,.2f} ({sign}{mom_pct:.1f}% MoM)</div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -180,7 +180,7 @@ if nav_choice == "?? Executive Overview":
         st.markdown(f"""
         <div class="metric-card">
             <div class="metric-title">80% Confidence Interval</div>
-            <div class="metric-value" style="font-size: 1.35rem;">?{fc['lower_bound']:,.0f} ? ?{fc['upper_bound']:,.0f}</div>
+            <div class="metric-value" style="font-size: 1.35rem;">€{fc['lower_bound']:,.0f} - €{fc['upper_bound']:,.0f}</div>
             <div class="metric-delta">Residual error band</div>
         </div>
         """, unsafe_allow_html=True)
@@ -189,7 +189,7 @@ if nav_choice == "?? Executive Overview":
         st.markdown(f"""
         <div class="metric-card">
             <div class="metric-title">3-Month Moving Average</div>
-            <div class="metric-value">?{avg_3m:,.2f}</div>
+            <div class="metric-value">€{avg_3m:,.2f}</div>
             <div class="metric-delta">Baseline trend</div>
         </div>
         """, unsafe_allow_html=True)
@@ -247,7 +247,7 @@ if nav_choice == "?? Executive Overview":
             margin=dict(l=20, r=20, t=30, b=20),
             hovermode='x unified',
             xaxis_title="Month",
-            yaxis_title="Monthly Spending (?)",
+            yaxis_title="Monthly Spending (€)",
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
         )
         st.plotly_chart(fig, use_container_width=True)
@@ -274,7 +274,7 @@ if nav_choice == "?? Executive Overview":
         st.plotly_chart(donut_fig, use_container_width=True)
 
     # Grounded AI Briefing Card
-    st.subheader("?? Grounded AI Financial Briefing")
+    st.subheader("Grounded AI Financial Briefing")
     with st.container():
         st.info(analyst.generate_executive_insights())
 
@@ -282,12 +282,12 @@ if nav_choice == "?? Executive Overview":
 # ----------------------------------------------------
 # TAB 2: CATEGORY DEEP DIVE
 # ----------------------------------------------------
-elif nav_choice == "?? Category Deep-Dive":
+elif nav_choice == "Category Deep-Dive":
     st.header("Category Dynamics & Spending Trends")
 
     cat_totals = clean_df.groupby('category')['amount'].agg(['sum', 'count', 'mean']).reset_index()
-    cat_totals.columns = ['Category', 'Total Spent (?)', 'Transaction Count', 'Average Transaction (?)']
-    cat_totals = cat_totals.sort_values(by='Total Spent (?)', ascending=False)
+    cat_totals.columns = ['Category', 'Total Spent (€)', 'Transaction Count', 'Average Transaction (€)']
+    cat_totals = cat_totals.sort_values(by='Total Spent (€)', ascending=False)
 
     col1, col2 = st.columns([3, 2])
 
@@ -299,7 +299,7 @@ elif nav_choice == "?? Category Deep-Dive":
             cat_month_pivot.reset_index(),
             x='year_month',
             y=cat_month_pivot.columns.tolist(),
-            labels={'value': 'Spending (?)', 'year_month': 'Month'},
+            labels={'value': 'Spending (€)', 'year_month': 'Month'},
             color_discrete_sequence=px.colors.qualitative.Safe
         )
         fig.update_layout(height=420, barmode='stack', margin=dict(l=20, r=20, t=20, b=20))
@@ -324,9 +324,9 @@ elif nav_choice == "?? Category Deep-Dive":
     st.subheader("Category Summary Metrics")
     st.dataframe(
         cat_totals.style.format({
-            'Total Spent (?)': '?{:,.2f}',
+            'Total Spent (€)': '€{:,.2f}',
             'Transaction Count': '{:,}',
-            'Average Transaction (?)': '?{:,.2f}'
+            'Average Transaction (€)': '€{:,.2f}'
         }),
         use_container_width=True
     )
@@ -335,7 +335,7 @@ elif nav_choice == "?? Category Deep-Dive":
 # ----------------------------------------------------
 # TAB 3: ANOMALY RADAR
 # ----------------------------------------------------
-elif nav_choice == "?? Anomaly Radar":
+elif nav_choice == "Anomaly Radar":
     st.header("Spending Anomaly Detection Radar")
     st.markdown("Identifies unusual spikes and transactions using **Isolation Forest**, **Local Outlier Factor (LOF)**, and dynamic statistical IQR bounds.")
 
@@ -347,7 +347,7 @@ elif nav_choice == "?? Anomaly Radar":
         st.metric("High Severity Outliers", f"{high_sev:,}", "Score > 0.80")
     with col3:
         max_outlier = anom_df['amount'].max()
-        st.metric("Highest Outlier Amount", f"?{max_outlier:,.2f}")
+        st.metric("Highest Outlier Amount", f"€{max_outlier:,.2f}")
 
     st.markdown("---")
 
@@ -390,7 +390,7 @@ elif nav_choice == "?? Anomaly Radar":
         .rename(columns={
             'clean_merchant': 'Merchant',
             'category': 'Category',
-            'amount': 'Amount (?)',
+            'amount': 'Amount (€)',
             'expected_range': 'Typical Range',
             'anomaly_score': 'Score (0-1)',
             'severity': 'Severity',
@@ -403,11 +403,11 @@ elif nav_choice == "?? Anomaly Radar":
 # ----------------------------------------------------
 # TAB 4: MODEL ARENA & EXPLAINABILITY
 # ----------------------------------------------------
-elif nav_choice == "?? Model Arena & Explainability":
+elif nav_choice == "Model Arena & Explainability":
     st.header("Machine Learning Benchmarks & Explainable AI (SHAP)")
     st.markdown("Inspect performance across the three core ML problems and explore exact Shapley feature attributions.")
 
-    st.subheader("?? Model Leaderboard")
+    st.subheader("Model Leaderboard")
     st.dataframe(model_bench_df, use_container_width=True)
 
     st.markdown("---")
@@ -415,16 +415,16 @@ elif nav_choice == "?? Model Arena & Explainability":
     col1, col2 = st.columns([1, 1])
 
     with col1:
-        st.subheader("?? Real-Time Transaction Categoriser")
+        st.subheader("Real-Time Transaction Categoriser")
         st.markdown("Test the trained NLP classification pipeline on raw text:")
-        user_tx = st.text_input("Enter a raw transaction string:", value="TESCO EXTRA BRAY -?48.72")
+        user_tx = st.text_input("Enter a raw transaction string:", value="TESCO EXTRA BRAY -€48.72")
         if user_tx:
             pred_cat, conf = predict_category(user_tx)
             st.success(f"**Predicted Category:** {pred_cat} (Confidence: **{conf:.1%}**)")
             st.caption("Cleaned tokens parsed by pipeline vectorizer and mapped to category probabilities.")
 
     with col2:
-        st.subheader("?? Time-Series Leakage Prevention")
+        st.subheader("Time-Series Leakage Prevention")
         st.info("""
         **Why Traditional K-Fold Fails on Financial Time-Series:**
         Randomly shuffling transactions causes future information to leak into past predictions (lookahead bias).
@@ -437,8 +437,8 @@ elif nav_choice == "?? Model Arena & Explainability":
         """)
 
     st.markdown("---")
-    st.subheader("?? Explainable AI: SHAP Waterfall Attribution")
-    st.markdown(f"**Baseline Average Spending:** ?{exp['base_value']:,.2f} ? **Model Forecast:** ?{exp['predicted_value']:,.2f} *(Net ?: ?{exp['total_shap_adjustment']:+,.2f})*")
+    st.subheader("Explainable AI: SHAP Waterfall Attribution")
+    st.markdown(f"**Baseline Average Spending:** €{exp['base_value']:,.2f} - **Model Forecast:** €{exp['predicted_value']:,.2f} *(Net: €{exp['total_shap_adjustment']:+,.2f})*")
 
     shap_df = pd.DataFrame(exp['feature_impacts']).head(8)
     shap_df['color'] = np.where(shap_df['shap_impact_eur'] > 0, '#ef4444', '#10b981')
@@ -448,12 +448,12 @@ elif nav_choice == "?? Model Arena & Explainability":
         y=shap_df['label'],
         orientation='h',
         marker=dict(color=shap_df['color']),
-        text=[f"?{val:+,.2f}" for val in shap_df['shap_impact_eur']],
+        text=[f"€{val:+,.2f}" for val in shap_df['shap_impact_eur']],
         textposition='auto'
     ))
     shap_fig.update_layout(
         title="SHAP Feature Attributions on Next Month's Spending",
-        xaxis_title="Contribution to Predicted Spending (?)",
+        xaxis_title="Contribution to Predicted Spending (€)",
         yaxis=dict(autorange="reversed"),
         height=400,
         margin=dict(l=20, r=20, t=40, b=20)
@@ -465,7 +465,7 @@ elif nav_choice == "?? Model Arena & Explainability":
 # ----------------------------------------------------
 # TAB 5: AI FINANCIAL ANALYST (CHAT)
 # ----------------------------------------------------
-elif nav_choice == "?? AI Financial Analyst (Chat)":
+elif nav_choice == "AI Financial Analyst (Chat)":
     st.header("Conversational Financial Analytics")
     st.markdown("""
     Ask questions in plain English. The system calculates exact numerical evidence from your data,
@@ -487,7 +487,7 @@ elif nav_choice == "?? AI Financial Analyst (Chat)":
         if st.button("Weekend vs weekday spending?"):
             prompt_to_run = "How much did I spend on weekends compared with weekdays?"
     with btn_col4:
-        if st.button("Am I on track for ?6,000 budget?"):
+        if st.button("Am I on track for €6,000 budget?"):
             prompt_to_run = "Am I on track to stay under 6000?"
 
     # Chat history
@@ -522,7 +522,7 @@ elif nav_choice == "?? AI Financial Analyst (Chat)":
 # ----------------------------------------------------
 # TAB 6: DATA MANAGEMENT
 # ----------------------------------------------------
-elif nav_choice == "?? Data Management":
+elif nav_choice == "Data Management":
     st.header("Data Engineering & Cleaning Inspector")
     st.markdown("Compare the raw, dirty transactional log with the cleaned and standardized data.")
 
@@ -540,7 +540,7 @@ elif nav_choice == "?? Data Management":
         st.caption(f"Total Clean Records: {len(clean_df):,}")
 
     st.markdown("---")
-    st.subheader("?? Export Processed Dataset")
+    st.subheader("Export Processed Dataset")
     csv_bytes = clean_df.to_csv(index=False).encode('utf-8')
     st.download_button(
         label="Download Cleaned Transactions CSV",
