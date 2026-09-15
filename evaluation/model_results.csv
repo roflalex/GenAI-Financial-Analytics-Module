@@ -1,0 +1,9 @@
+Task / Problem,Model Name,Primary Metric,Primary Score,Secondary Metric,Secondary Score,Notes
+Expense Categorisation (NLP),TF-IDF + Logistic Regression,Weighted F1,0.9874,Accuracy,0.9873,Evaluated on stratified 20% test split
+Expense Categorisation (NLP),Sentence Transformer + Logistic Regression,Weighted F1,0.9874,Accuracy,0.9873,Evaluated on stratified 20% test split
+Expense Categorisation (NLP),TF-IDF + Random Forest,Weighted F1,0.9308,Accuracy,0.9423,Evaluated on stratified 20% test split
+Spending Forecasting (Time-Series),Random Forest Regressor,MAE (EUR),EUR 695.52,MAPE (%),13.46%,Evaluated using rolling-window time-series CV (no leakage)
+Spending Forecasting (Time-Series),XGBoost Regressor,MAE (EUR),EUR 796.41,MAPE (%),15.57%,Evaluated using rolling-window time-series CV (no leakage)
+Spending Forecasting (Time-Series),Naive Baseline (3-month avg),MAE (EUR),EUR 801.83,MAPE (%),14.34%,Evaluated using rolling-window time-series CV (no leakage)
+Spending Forecasting (Time-Series),Linear Regression (Ridge),MAE (EUR),EUR 886.79,MAPE (%),17.24%,Evaluated using rolling-window time-series CV (no leakage)
+Spending Anomaly Detection (Unsupervised),Isolation Forest + LOF + Z-Score Consensus,Detected Anomalies,177 transactions (4.99%),High Severity Outliers,48 transactions,Multivariate scoring with category-level typical IQR bounds

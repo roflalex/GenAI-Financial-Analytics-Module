@@ -1,0 +1,5 @@
+model,mae_eur,rmse_eur,mape_pct
+Random Forest Regressor,695.52,849.57,13.46
+XGBoost Regressor,796.41,1014.91,15.57
+Naive Baseline (3-month avg),801.83,1025.81,14.34
+Linear Regression (Ridge),886.79,1139.1,17.24

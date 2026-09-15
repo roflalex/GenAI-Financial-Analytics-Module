@@ -1,0 +1,178 @@
+date,raw_merchant,clean_merchant,category,amount,expected_range,anomaly_score,severity,explanation
+2023-04-01,  PENNEYS PRIMARK CORK   ,PENNEYS PRIMARK CORK,Shopping,788.57,?10.00 ? ?280.82,1.0,High,Amount ?788.57 is 10.9x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2023-12-31,Nandos DUNDALK,NANDOS DUNDALK,Dining & Takeaway,446.34,?3.80 ? ?95.17,0.9958,High,Amount ?446.34 is 16.5x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2024-07-01,PENNEYS PRIMARK BRAY,PENNEYS PRIMARK BRAY,Shopping,938.71,?10.00 ? ?280.82,0.9882,High,Amount ?938.71 is 13.0x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2023-05-15,APPLE STORE RETAIL,APPLE STORE RETAIL,Shopping,862.93,?10.00 ? ?280.82,0.9774,High,Amount ?862.93 is 12.0x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2023-03-21,Nandos DUNDALK,NANDOS DUNDALK,Dining & Takeaway,479.32,?3.80 ? ?95.17,0.9757,High,Amount ?479.32 is 17.7x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2023-09-05,Boojum Burrito KILKENNY,BOOJUM BURRITO KILKENNY,Dining & Takeaway,456.74,?3.80 ? ?95.17,0.9716,High,Amount ?456.74 is 16.9x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2025-03-23,TK MAXX KILKENNY,TK MAXX KILKENNY,Shopping,589.77,?10.00 ? ?280.82,0.9558,High,Amount ?589.77 is 8.2x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2023-10-09,BOOKING.COM HOTEL,BOOKING COM HOTEL,Travel,1342.05,?43.63 ? ?570.85,0.9501,High,Amount ?1342.05 is 7.8x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2024-08-21,TK MAXX BRAY,TK MAXX BRAY,Shopping,643.01,?10.00 ? ?280.82,0.9493,High,Amount ?643.01 is 8.9x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2023-12-14,McDonalds SWORDS,MCDONALDS SWORDS,Dining & Takeaway,313.59,?3.80 ? ?95.17,0.9419,High,Amount ?313.59 is 11.6x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2023-08-18,Gourmet Burger Kitchen,GOURMET BURGER KITCHEN,Dining & Takeaway,299.72,?3.80 ? ?95.17,0.9338,High,Amount ?299.72 is 11.1x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2024-11-04,Boojum Burrito GALWAY,BOOJUM BURRITO GALWAY,Dining & Takeaway,298.16,?3.80 ? ?95.17,0.9305,High,Amount ?298.16 is 11.0x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2024-02-03,the local pub & grill,THE LOCAL PUB & GRILL,Dining & Takeaway,243.68,?3.80 ? ?95.17,0.9184,High,Amount ?243.68 is 9.0x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2025-03-21,RYANAIR *9557 AIRLINE,RYANAIR AIRLINE,Travel,1132.39,?43.63 ? ?570.85,0.9111,High,Amount ?1132.39 is 6.6x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2023-10-11,DELIVEROO.IE *8509,DELIVEROO IE,Dining & Takeaway,261.16,?3.80 ? ?95.17,0.8983,High,Amount ?261.16 is 9.7x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2023-06-19,JUST EAT 9302,JUST EAT 9302,Dining & Takeaway,246.34,?3.80 ? ?95.17,0.8983,High,Amount ?246.34 is 9.1x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2025-06-17,  McDonalds LIMERICK   ,MCDONALDS LIMERICK,Dining & Takeaway,225.71,?3.80 ? ?95.17,0.8598,High,Amount ?225.71 is 8.3x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2024-11-09,YOUTUBE PREMIUM,YOUTUBE PREMIUM,Entertainment & Subscriptions,77.11,?4.99 ? ?58.87,0.819,High,Amount ?77.11 is 5.4x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2023-06-17,  AER LINGUS DUBLIN   ,AER LINGUS DUBLIN,Travel,516.64,?43.63 ? ?570.85,0.7644,Medium,Amount ?516.64 is 3.0x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2023-01-15,Dublin Airport Parking,DUBLIN AIRPORT PARKING,Travel,504.09,?43.63 ? ?570.85,0.7586,Medium,Amount ?504.09 is 2.9x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2024-11-08,RYANAIR *6861 AIRLINE,RYANAIR AIRLINE,Travel,523.76,?43.63 ? ?570.85,0.7231,Medium,Amount ?523.76 is 3.1x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2023-04-08,Dublin Airport Parking,DUBLIN AIRPORT PARKING,Travel,424.55,?43.63 ? ?570.85,0.7189,Medium,Amount ?424.55 is 2.5x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2023-08-06,RYANAIR *9986 AIRLINE,RYANAIR AIRLINE,Travel,427.54,?43.63 ? ?570.85,0.7168,Medium,Amount ?427.54 is 2.5x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2025-06-14,AIRBNB * 7166,AIRBNB 7166,Travel,438.35,?43.63 ? ?570.85,0.7165,Medium,Amount ?438.35 is 2.6x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2024-10-20,YOUTUBE PREMIUM,YOUTUBE PREMIUM,Entertainment & Subscriptions,56.73,?4.99 ? ?58.87,0.7007,Medium,Amount ?56.73 is 4.0x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2024-12-02,Marks & Spencer Food,MARKS & SPENCER FOOD,Groceries,164.96,?15.84 ? ?151.31,0.6899,Medium,Amount ?164.96 is 3.0x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2023-12-30,ZARA IRELAND KILKENNY,ZARA IRELAND KILKENNY,Shopping,239.44,?10.00 ? ?280.82,0.6849,Medium,Amount ?239.44 is 3.3x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2023-09-18,  Bord Gais Energy DD   ,BORD GAIS ENERGY DD,Utilities & Bills,233.55,?41.82 ? ?233.55,0.6812,Medium,Amount ?233.55 is 2.5x typical Utilities & Bills median (?94.14). Exceeds typical ceiling of ?233.55.
+2024-12-28,ALDI IRELAND GMBH,ALDI IRELAND GMBH,Groceries,154.18,?15.84 ? ?151.31,0.6684,Medium,Amount ?154.18 is 2.8x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2023-12-22,Penneys Primark Dundalk,PENNEYS PRIMARK DUNDALK,Shopping,267.1,?10.00 ? ?280.82,0.668,Medium,Amount ?267.10 is 3.7x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2023-04-08,ODEON CINEMAS SWORDS,ODEON CINEMAS SWORDS,Entertainment & Subscriptions,51.31,?4.99 ? ?58.87,0.6671,Medium,Amount ?51.31 is 3.6x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2025-02-23,RYANAIR *3336 AIRLINE,RYANAIR AIRLINE,Travel,375.1,?43.63 ? ?570.85,0.6595,Medium,Amount ?375.10 is 2.2x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2024-12-07,TESCO EXTRA DUNDALK,TESCO EXTRA DUNDALK,Groceries,149.97,?15.84 ? ?151.31,0.6567,Medium,Amount ?149.97 is 2.7x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2025-05-03,  CIRCLE K CORK   ,CIRCLE K CORK,Transport,63.89,?2.40 ? ?63.89,0.6495,Medium,Amount ?63.89 is 3.3x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-08-12,  APPLE STORE RETAIL   ,APPLE STORE RETAIL,Shopping,208.8,?10.00 ? ?280.82,0.6328,Medium,Amount ?208.80 is 2.9x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2025-05-10,lidl ireland,LIDL IRELAND,Groceries,141.41,?15.84 ? ?151.31,0.6296,Medium,Amount ?141.41 is 2.6x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2024-06-16,  DISNEY PLUS MONTHLY   ,DISNEY PLUS MONTHLY,Entertainment & Subscriptions,48.16,?4.99 ? ?58.87,0.628,Medium,Amount ?48.16 is 3.4x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2024-12-22,Boojum Burrito Cork,BOOJUM BURRITO CORK,Dining & Takeaway,102.71,?3.80 ? ?95.17,0.626,Medium,Amount ?102.71 is 3.8x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2023-12-04,Aldi Store 5320,ALDI STORE 5320,Groceries,148.22,?15.84 ? ?151.31,0.6246,Medium,Amount ?148.22 is 2.7x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2023-07-08,amzn prime member,AMZN PRIME MEMBER,Entertainment & Subscriptions,47.21,?4.99 ? ?58.87,0.624,Medium,Amount ?47.21 is 3.3x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2024-12-21,  JUST EAT 8695   ,JUST EAT 8695,Dining & Takeaway,99.91,?3.80 ? ?95.17,0.6211,Medium,Amount ?99.91 is 3.7x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2023-05-27,Unknown Merchant,UNKNOWN MERCHANT,Dining & Takeaway,99.39,?3.80 ? ?95.17,0.6144,Medium,Amount ?99.39 is 3.7x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2025-01-12,EIR TELECOM DIRECT DEBIT,EIR TELECOM DIRECT DEBIT,Utilities & Bills,198.66,?41.82 ? ?233.55,0.61,Medium,Amount ?198.66 is 2.1x typical Utilities & Bills median (?94.14). Exceeds typical ceiling of ?233.55.
+2023-12-30,  IKEA DUBLIN STORE   ,IKEA DUBLIN STORE,Shopping,196.08,?10.00 ? ?280.82,0.6077,Medium,Amount ?196.08 is 2.7x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2023-12-28,Spar Express Limerick,SPAR EXPRESS LIMERICK,Groceries,142.62,?15.84 ? ?151.31,0.6058,Medium,Amount ?142.62 is 2.6x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2025-03-24,AIRBNB * 2549,AIRBNB 2549,Travel,375.44,?43.63 ? ?570.85,0.6044,Medium,Amount ?375.44 is 2.2x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2023-08-11,UBER *TRIP 9564,UBER,Transport,59.93,?2.40 ? ?63.89,0.5983,Medium,Amount ?59.93 is 3.1x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2024-04-18,  LEAP CARD AUTO TOPUP   ,LEAP CARD AUTO TOPUP,Transport,60.12,?2.40 ? ?63.89,0.5983,Medium,Amount ?60.12 is 3.1x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2025-06-20,DAA DUTY FREE,DAA DUTY FREE,Travel,360.96,?43.63 ? ?570.85,0.5965,Medium,Amount ?360.96 is 2.1x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2024-09-20,Applegreen Motorway Services,APPLEGREEN MOTORWAY SERVICES,Transport,59.63,?2.40 ? ?63.89,0.5956,Medium,Amount ?59.63 is 3.1x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2024-08-01,lidl 2451 kilkenny,LIDL 2451 KILKENNY,Groceries,139.08,?15.84 ? ?151.31,0.5947,Medium,Amount ?139.08 is 2.5x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2024-04-30,Unknown Merchant,UNKNOWN MERCHANT,Groceries,139.86,?15.84 ? ?151.31,0.5947,Medium,Amount ?139.86 is 2.6x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2023-12-17,SuperValu CORK,SUPERVALU CORK,Groceries,133.28,?15.84 ? ?151.31,0.5926,Medium,Amount ?133.28 is 2.4x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2023-11-26,AIRBNB * 6932,AIRBNB 6932,Travel,332.46,?43.63 ? ?570.85,0.5901,Medium,Amount ?332.46 is 1.9x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2024-08-31,AMZN Mktp UK*6658,AMZN MKTP UK,Shopping,180.91,?10.00 ? ?280.82,0.582,Medium,Amount ?180.91 is 2.5x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2023-09-02,youtube premium,YOUTUBE PREMIUM,Entertainment & Subscriptions,43.37,?4.99 ? ?58.87,0.5762,Medium,Amount ?43.37 is 3.1x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2023-12-08,  Tesco Express   ,TESCO EXPRESS,Groceries,135.3,?15.84 ? ?151.31,0.5745,Medium,Amount ?135.30 is 2.5x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2024-02-23,TESCO EXTRA KILKENNY,TESCO EXTRA KILKENNY,Groceries,134.57,?15.84 ? ?151.31,0.5724,Medium,Amount ?134.57 is 2.5x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2023-12-17,SHELL PETROL 5030,SHELL PETROL 5030,Transport,56.59,?2.40 ? ?63.89,0.5665,Medium,Amount ?56.59 is 2.9x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-01-29,booking.com hotel,BOOKING COM HOTEL,Travel,267.73,?43.63 ? ?570.85,0.5539,Medium,Amount ?267.73 is 1.6x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2023-04-16,airbnb * 5879,AIRBNB 5879,Travel,275.14,?43.63 ? ?570.85,0.5535,Medium,Amount ?275.14 is 1.6x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2023-11-16,  Brown Thomas Dublin   ,BROWN THOMAS DUBLIN,Shopping,202.52,?10.00 ? ?280.82,0.5483,Medium,Amount ?202.52 is 2.8x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2025-03-02,  RYANAIR *4281 AIRLINE   ,RYANAIR AIRLINE,Travel,254.59,?43.63 ? ?570.85,0.5474,Medium,Amount ?254.59 is 1.5x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2025-02-16,  DISNEY PLUS MONTHLY   ,DISNEY PLUS MONTHLY,Entertainment & Subscriptions,41.58,?4.99 ? ?58.87,0.5415,Medium,Amount ?41.58 is 2.9x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2023-03-26,  Bord Gais Energy DD   ,BORD GAIS ENERGY DD,Utilities & Bills,176.02,?41.82 ? ?233.55,0.5398,Medium,Amount ?176.02 is 1.9x typical Utilities & Bills median (?94.14). Exceeds typical ceiling of ?233.55.
+2024-08-11,Audible UK Monthly,AUDIBLE UK MONTHLY,Entertainment & Subscriptions,40.67,?4.99 ? ?58.87,0.5305,Medium,Amount ?40.67 is 2.9x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2023-06-07,Youtube Premium,YOUTUBE PREMIUM,Entertainment & Subscriptions,42.09,?4.99 ? ?58.87,0.5304,Medium,Amount ?42.09 is 3.0x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2023-12-16,Marks & Spencer Food,MARKS & SPENCER FOOD,Groceries,123.65,?15.84 ? ?151.31,0.5281,Medium,Amount ?123.65 is 2.3x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2024-11-30,Steam Games Purchase,STEAM GAMES PURCHASE,Entertainment & Subscriptions,40.51,?4.99 ? ?58.87,0.5278,Medium,Amount ?40.51 is 2.9x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2024-12-30,aldi ireland gmbh,ALDI IRELAND GMBH,Groceries,130.0,?15.84 ? ?151.31,0.5269,Medium,Amount ?130.00 is 2.4x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2023-07-23,FREE NOW TAXI DUBLIN,FREE NOW TAXI DUBLIN,Transport,53.7,?2.40 ? ?63.89,0.5268,Medium,Amount ?53.70 is 2.8x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-10-29,Odeon Cinemas Dublin,ODEON CINEMAS DUBLIN,Entertainment & Subscriptions,40.11,?4.99 ? ?58.87,0.5264,Medium,Amount ?40.11 is 2.8x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2023-07-16,playstation network 4616,PLAYSTATION NETWORK 4616,Entertainment & Subscriptions,39.88,?4.99 ? ?58.87,0.5227,Medium,Amount ?39.88 is 2.8x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2024-07-31,IKEA DUBLIN STORE,IKEA DUBLIN STORE,Shopping,194.0,?10.00 ? ?280.82,0.5226,Medium,Amount ?194.00 is 2.7x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2025-04-08,  BOOTS PHARMACY BRAY   ,BOOTS PHARMACY BRAY,Shopping,195.31,?10.00 ? ?280.82,0.5214,Medium,Amount ?195.31 is 2.7x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2023-11-22,booking.com hotel,BOOKING COM HOTEL,Travel,319.66,?43.63 ? ?570.85,0.5187,Medium,Amount ?319.66 is 1.9x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2023-12-25,Unknown Merchant,UNKNOWN MERCHANT,Groceries,128.71,?15.84 ? ?151.31,0.5169,Medium,Amount ?128.71 is 2.4x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2023-04-29,tesco store #3906,TESCO STORE,Groceries,122.32,?15.84 ? ?151.31,0.5164,Medium,Amount ?122.32 is 2.2x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2023-09-24,Sky Ireland TV & Broadband,SKY IRELAND TV & BROADBAND,Utilities & Bills,173.73,?41.82 ? ?233.55,0.5148,Medium,Amount ?173.73 is 1.8x typical Utilities & Bills median (?94.14). Exceeds typical ceiling of ?233.55.
+2024-06-11,boots pharmacy swords,BOOTS PHARMACY SWORDS,Shopping,188.44,?10.00 ? ?280.82,0.5135,Medium,Amount ?188.44 is 2.6x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2023-10-29,  Dentist Clinic Dublin   ,DENTIST CLINIC DUBLIN,Health & Fitness,85.19,?12.00 ? ?87.97,0.5107,Medium,Amount ?85.19 is 2.3x typical Health & Fitness median (?37.24). Exceeds typical ceiling of ?87.97.
+2023-12-17,Tesco Store #8342,TESCO STORE,Groceries,120.65,?15.84 ? ?151.31,0.5064,Medium,Amount ?120.65 is 2.2x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2023-02-17,ELECTRIC IRELAND DD,ELECTRIC IRELAND DD,Utilities & Bills,189.49,?41.82 ? ?233.55,0.5063,Medium,Amount ?189.49 is 2.0x typical Utilities & Bills median (?94.14). Exceeds typical ceiling of ?233.55.
+2023-03-18,youtube premium,YOUTUBE PREMIUM,Entertainment & Subscriptions,39.04,?4.99 ? ?58.87,0.5053,Medium,Amount ?39.04 is 2.8x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2024-10-06,Steam Games Purchase,STEAM GAMES PURCHASE,Entertainment & Subscriptions,38.49,?4.99 ? ?58.87,0.5034,Medium,Amount ?38.49 is 2.7x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2023-06-13,Sky Ireland TV & Broadband,SKY IRELAND TV & BROADBAND,Utilities & Bills,189.03,?41.82 ? ?233.55,0.5032,Medium,Amount ?189.03 is 2.0x typical Utilities & Bills median (?94.14). Exceeds typical ceiling of ?233.55.
+2023-05-20,BOOTS PHARMACY BRAY,BOOTS PHARMACY BRAY,Shopping,160.1,?10.00 ? ?280.82,0.5007,Medium,Amount ?160.10 is 2.2x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2024-05-30,Starbucks Coffee #6180,STARBUCKS COFFEE,Dining & Takeaway,94.67,?3.80 ? ?95.17,0.5001,Medium,Amount ?94.67 is 3.5x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2024-04-27,BOOKING.COM HOTEL,BOOKING COM HOTEL,Travel,188.36,?43.63 ? ?570.85,0.4981,Medium,Amount ?188.36 is 1.1x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2023-05-15,FLYEfit Gym Monthly DD,FLYEFIT GYM MONTHLY DD,Health & Fitness,87.97,?12.00 ? ?87.97,0.4916,Medium,Amount ?87.97 is 2.4x typical Health & Fitness median (?37.24). Exceeds typical ceiling of ?87.97.
+2023-10-15,SHELL PETROL 1000,SHELL PETROL 1000,Transport,2.77,?2.40 ? ?63.89,0.3416,Medium,Amount ?2.77 is 0.1x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2025-04-06,uber *trip 6421,UBER,Transport,2.87,?2.40 ? ?63.89,0.3376,Medium,Amount ?2.87 is 0.1x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2025-03-09,LEAP CARD AUTO TOPUP,LEAP CARD AUTO TOPUP,Transport,4.21,?2.40 ? ?63.89,0.3144,Medium,Amount ?4.21 is 0.2x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2025-06-15,shell petrol 7987,SHELL PETROL 7987,Transport,4.63,?2.40 ? ?63.89,0.309,Medium,Amount ?4.63 is 0.2x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2024-03-02,leap card auto topup,LEAP CARD AUTO TOPUP,Transport,4.45,?2.40 ? ?63.89,0.3086,Medium,Amount ?4.45 is 0.2x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2025-03-11,LIDL IRELAND,LIDL IRELAND,Groceries,8.63,?15.84 ? ?151.31,0.3051,Medium,Amount ?8.63 is 0.2x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2024-04-15,  ALDI IRELAND GMBH   ,ALDI IRELAND GMBH,Groceries,9.53,?15.84 ? ?151.31,0.3018,Medium,Amount ?9.53 is 0.2x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2024-06-14,  Tesco Express   ,TESCO EXPRESS,Groceries,9.58,?15.84 ? ?151.31,0.2971,Medium,Amount ?9.58 is 0.2x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2025-02-17,Lidl 9132 DUNDALK,LIDL 9132 DUNDALK,Groceries,11.37,?15.84 ? ?151.31,0.2949,Medium,Amount ?11.37 is 0.2x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2024-09-12,SuperValu KILKENNY,SUPERVALU KILKENNY,Groceries,9.87,?15.84 ? ?151.31,0.2943,Medium,Amount ?9.87 is 0.2x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2023-09-01,Lidl 9741 DUBLIN,LIDL 9741 DUBLIN,Groceries,11.0,?15.84 ? ?151.31,0.2931,Medium,Amount ?11.00 is 0.2x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2023-08-16,TESCO EXTRA KILKENNY,TESCO EXTRA KILKENNY,Groceries,10.58,?15.84 ? ?151.31,0.2926,Medium,Amount ?10.58 is 0.2x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2024-01-26,aldi store 5987,ALDI STORE 5987,Groceries,10.91,?15.84 ? ?151.31,0.2925,Medium,Amount ?10.91 is 0.2x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2024-01-16,spar express dundalk,SPAR EXPRESS DUNDALK,Groceries,11.44,?15.84 ? ?151.31,0.2922,Medium,Amount ?11.44 is 0.2x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2024-02-28,  Lidl 4026 LIMERICK   ,LIDL 4026 LIMERICK,Groceries,11.41,?15.84 ? ?151.31,0.2922,Medium,Amount ?11.41 is 0.2x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2024-12-17,spar express swords,SPAR EXPRESS SWORDS,Groceries,11.5,?15.84 ? ?151.31,0.2905,Medium,Amount ?11.50 is 0.2x typical Groceries median (?54.73). Exceeds typical ceiling of ?151.31.
+2024-11-09,FREE NOW TAXI DUBLIN,FREE NOW TAXI DUBLIN,Transport,5.13,?2.40 ? ?63.89,0.2882,Medium,Amount ?5.13 is 0.3x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2024-01-02,  Sky Ireland TV & Broadband   ,SKY IRELAND TV & BROADBAND,Utilities & Bills,51.93,?41.82 ? ?233.55,0.1957,Medium,Amount ?51.93 is 0.6x typical Utilities & Bills median (?94.14). Exceeds typical ceiling of ?233.55.
+2023-08-25,VIRGIN MEDIA IRELAND,VIRGIN MEDIA IRELAND,Utilities & Bills,52.07,?41.82 ? ?233.55,0.1957,Medium,Amount ?52.07 is 0.6x typical Utilities & Bills median (?94.14). Exceeds typical ceiling of ?233.55.
+2025-04-28,LEAP CARD AUTO TOPUP,LEAP CARD AUTO TOPUP,Transport,2.51,?2.40 ? ?63.89,0.1931,Medium,Amount ?2.51 is 0.1x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-07-26,  Irish Water Direct Debit   ,IRISH WATER DIRECT DEBIT,Utilities & Bills,54.71,?41.82 ? ?233.55,0.1928,Medium,Amount ?54.71 is 0.6x typical Utilities & Bills median (?94.14). Exceeds typical ceiling of ?233.55.
+2024-06-20,Sky Ireland TV & Broadband,SKY IRELAND TV & BROADBAND,Utilities & Bills,56.92,?41.82 ? ?233.55,0.1919,Medium,Amount ?56.92 is 0.6x typical Utilities & Bills median (?94.14). Exceeds typical ceiling of ?233.55.
+2024-08-08,DUBLIN BUS 7897,DUBLIN BUS 7897,Transport,2.55,?2.40 ? ?63.89,0.1893,Medium,Amount ?2.55 is 0.1x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-05-15,  UBER *TRIP 6646   ,UBER,Transport,2.96,?2.40 ? ?63.89,0.1884,Medium,Amount ?2.96 is 0.2x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2025-06-16,UBER *TRIP 7901,UBER,Transport,3.3,?2.40 ? ?63.89,0.1862,Medium,Amount ?3.30 is 0.2x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-12-15,FREE NOW TAXI DUBLIN,FREE NOW TAXI DUBLIN,Transport,3.03,?2.40 ? ?63.89,0.1843,Medium,Amount ?3.03 is 0.2x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2024-01-16,TFI Leap Card Topup,TFI LEAP CARD TOPUP,Transport,3.99,?2.40 ? ?63.89,0.1829,Medium,Amount ?3.99 is 0.2x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2024-10-04,SHELL PETROL 6742,SHELL PETROL 6742,Transport,2.76,?2.40 ? ?63.89,0.1821,Medium,Amount ?2.76 is 0.1x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2024-01-30,Physiotherapy Care Dublin,PHYSIOTHERAPY CARE DUBLIN,Health & Fitness,64.8,?12.00 ? ?87.97,0.1759,Medium,Amount ?64.80 is 1.7x typical Health & Fitness median (?37.24). Exceeds typical ceiling of ?87.97.
+2023-07-26,shell petrol 1606,SHELL PETROL 1606,Transport,4.27,?2.40 ? ?63.89,0.1707,Medium,Amount ?4.27 is 0.2x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-10-12,LEAP CARD AUTO TOPUP,LEAP CARD AUTO TOPUP,Transport,4.3,?2.40 ? ?63.89,0.1694,Medium,Amount ?4.30 is 0.2x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-10-19,  FREE NOW TAXI DUBLIN   ,FREE NOW TAXI DUBLIN,Transport,4.38,?2.40 ? ?63.89,0.1584,Medium,Amount ?4.38 is 0.2x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2024-05-30,circle k limerick,CIRCLE K LIMERICK,Transport,4.45,?2.40 ? ?63.89,0.1578,Medium,Amount ?4.45 is 0.2x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-01-31,circle k bray,CIRCLE K BRAY,Transport,4.69,?2.40 ? ?63.89,0.1578,Medium,Amount ?4.69 is 0.2x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2025-03-19,HOTELS.COM RESERVATION,HOTELS COM RESERVATION,Travel,25.0,?43.63 ? ?570.85,0.1569,Medium,Amount ?25.00 is 0.1x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2025-04-14,RYANAIR *9247 AIRLINE,RYANAIR AIRLINE,Travel,25.0,?43.63 ? ?570.85,0.1569,Medium,Amount ?25.00 is 0.1x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2023-05-11,AER LINGUS DUBLIN,AER LINGUS DUBLIN,Travel,25.0,?43.63 ? ?570.85,0.1569,Medium,Amount ?25.00 is 0.1x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2023-06-05,RYANAIR *4695 AIRLINE,RYANAIR AIRLINE,Travel,25.0,?43.63 ? ?570.85,0.1569,Medium,Amount ?25.00 is 0.1x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2024-10-17,  RYANAIR *9163 AIRLINE   ,RYANAIR AIRLINE,Travel,25.0,?43.63 ? ?570.85,0.1569,Medium,Amount ?25.00 is 0.1x typical Travel median (?171.42). Exceeds typical ceiling of ?570.85.
+2025-02-06,DUBLIN BUS 9447,DUBLIN BUS 9447,Transport,4.74,?2.40 ? ?63.89,0.1558,Medium,Amount ?4.74 is 0.2x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-09-05,circle k swords,CIRCLE K SWORDS,Transport,4.58,?2.40 ? ?63.89,0.155,Medium,Amount ?4.58 is 0.2x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2024-12-18,LEAP CARD AUTO TOPUP,LEAP CARD AUTO TOPUP,Transport,5.8,?2.40 ? ?63.89,0.141,Medium,Amount ?5.80 is 0.3x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-05-01,Unknown Merchant,UNKNOWN MERCHANT,Transport,6.12,?2.40 ? ?63.89,0.1341,Medium,Amount ?6.12 is 0.3x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-05-02,Dublin Bus 8415,DUBLIN BUS 8415,Transport,6.25,?2.40 ? ?63.89,0.1328,Medium,Amount ?6.25 is 0.3x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2024-02-08,ZARA IRELAND BRAY,ZARA IRELAND BRAY,Shopping,13.63,?10.00 ? ?280.82,0.1219,Medium,Amount ?13.63 is 0.2x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2024-12-16,ZARA IRELAND SWORDS,ZARA IRELAND SWORDS,Shopping,14.3,?10.00 ? ?280.82,0.1212,Medium,Amount ?14.30 is 0.2x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2024-03-21,AMZN Mktp UK*3764,AMZN MKTP UK,Shopping,13.31,?10.00 ? ?280.82,0.1191,Medium,Amount ?13.31 is 0.2x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2024-11-27,  APPLE STORE RETAIL   ,APPLE STORE RETAIL,Shopping,15.45,?10.00 ? ?280.82,0.1176,Medium,Amount ?15.45 is 0.2x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2023-12-08,Penneys Primark Galway,PENNEYS PRIMARK GALWAY,Shopping,15.41,?10.00 ? ?280.82,0.1176,Medium,Amount ?15.41 is 0.2x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2023-06-26,UBER *TRIP 1235,UBER,Transport,6.59,?2.40 ? ?63.89,0.1157,Medium,Amount ?6.59 is 0.3x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-11-14,DUBLIN BUS 7427,DUBLIN BUS 7427,Transport,6.61,?2.40 ? ?63.89,0.1157,Medium,Amount ?6.61 is 0.3x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2024-12-25,Decathlon Sports Ireland,DECATHLON SPORTS IRELAND,Shopping,15.38,?10.00 ? ?280.82,0.1153,Medium,Amount ?15.38 is 0.2x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2023-12-27,Decathlon Sports Ireland,DECATHLON SPORTS IRELAND,Shopping,16.0,?10.00 ? ?280.82,0.1143,Medium,Amount ?16.00 is 0.2x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2024-07-19,LEAP CARD AUTO TOPUP,LEAP CARD AUTO TOPUP,Transport,6.75,?2.40 ? ?63.89,0.1124,Medium,Amount ?6.75 is 0.3x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2024-06-03,asos.com orders,ASOS COM ORDERS,Shopping,10.88,?10.00 ? ?280.82,0.1116,Medium,Amount ?10.88 is 0.2x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2024-10-21,zara ireland bray,ZARA IRELAND BRAY,Shopping,11.83,?10.00 ? ?280.82,0.1108,Medium,Amount ?11.83 is 0.2x typical Shopping median (?72.17). Exceeds typical ceiling of ?280.82.
+2023-06-30,irish rail online,IRISH RAIL ONLINE,Transport,7.17,?2.40 ? ?63.89,0.1104,Medium,Amount ?7.17 is 0.4x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-04-07,Applegreen Motorway Services,APPLEGREEN MOTORWAY SERVICES,Transport,7.12,?2.40 ? ?63.89,0.1091,Medium,Amount ?7.12 is 0.4x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2024-04-18,Dominos Pizza Bray,DOMINOS PIZZA BRAY,Dining & Takeaway,4.34,?3.80 ? ?95.17,0.1069,Medium,Amount ?4.34 is 0.2x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2024-09-20,DELIVEROO.IE *4578,DELIVEROO IE,Dining & Takeaway,4.08,?3.80 ? ?95.17,0.1068,Medium,Amount ?4.08 is 0.2x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2024-11-06,IRISH RAIL ONLINE,IRISH RAIL ONLINE,Transport,7.41,?2.40 ? ?63.89,0.1063,Medium,Amount ?7.41 is 0.4x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2024-07-26,Dominos Pizza CORK,DOMINOS PIZZA CORK,Dining & Takeaway,4.47,?3.80 ? ?95.17,0.1058,Medium,Amount ?4.47 is 0.2x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2023-04-25,  Costa Coffee SWORDS   ,COSTA COFFEE SWORDS,Dining & Takeaway,4.46,?3.80 ? ?95.17,0.1058,Medium,Amount ?4.46 is 0.2x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2024-08-29,McDonalds LIMERICK,MCDONALDS LIMERICK,Dining & Takeaway,4.01,?3.80 ? ?95.17,0.1056,Medium,Amount ?4.01 is 0.1x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2023-02-24,DART TICKET MACHINE,DART TICKET MACHINE,Transport,7.54,?2.40 ? ?63.89,0.1055,Medium,Amount ?7.54 is 0.4x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2024-03-07,insomnia coffee co,INSOMNIA COFFEE CO,Dining & Takeaway,4.14,?3.80 ? ?95.17,0.1054,Medium,Amount ?4.14 is 0.2x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2024-06-12,JUST EAT 9364,JUST EAT 9364,Dining & Takeaway,4.53,?3.80 ? ?95.17,0.1043,Medium,Amount ?4.53 is 0.2x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2024-05-20,Dominos Pizza BRAY,DOMINOS PIZZA BRAY,Dining & Takeaway,4.61,?3.80 ? ?95.17,0.1039,Medium,Amount ?4.61 is 0.2x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2023-05-02,TFI Leap Card Topup,TFI LEAP CARD TOPUP,Transport,7.57,?2.40 ? ?63.89,0.1022,Medium,Amount ?7.57 is 0.4x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2024-02-09,DART TICKET MACHINE,DART TICKET MACHINE,Transport,7.56,?2.40 ? ?63.89,0.1022,Medium,Amount ?7.56 is 0.4x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-12-29,free now taxi dublin,FREE NOW TAXI DUBLIN,Transport,7.58,?2.40 ? ?63.89,0.1022,Medium,Amount ?7.58 is 0.4x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2024-02-27,Boojum Burrito LIMERICK,BOOJUM BURRITO LIMERICK,Dining & Takeaway,4.2,?3.80 ? ?95.17,0.1015,Medium,Amount ?4.20 is 0.2x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2024-12-25,Dominos Pizza SWORDS,DOMINOS PIZZA SWORDS,Dining & Takeaway,4.79,?3.80 ? ?95.17,0.1005,Medium,Amount ?4.79 is 0.2x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2023-08-03,Dominos Pizza DUNDALK,DOMINOS PIZZA DUNDALK,Dining & Takeaway,4.72,?3.80 ? ?95.17,0.1004,Medium,Amount ?4.72 is 0.2x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2025-03-04,Nandos CORK,NANDOS CORK,Dining & Takeaway,4.72,?3.80 ? ?95.17,0.1004,Medium,Amount ?4.72 is 0.2x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2023-12-05,Costa Coffee DUBLIN,COSTA COFFEE DUBLIN,Dining & Takeaway,4.83,?3.80 ? ?95.17,0.0997,Medium,Amount ?4.83 is 0.2x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2024-03-01,Boojum Burrito KILKENNY,BOOJUM BURRITO KILKENNY,Dining & Takeaway,4.74,?3.80 ? ?95.17,0.0995,Medium,Amount ?4.74 is 0.2x typical Dining & Takeaway median (?27.04). Exceeds typical ceiling of ?95.17.
+2024-03-14,Steam Games Purchase,STEAM GAMES PURCHASE,Entertainment & Subscriptions,5.79,?4.99 ? ?58.87,0.095,Medium,Amount ?5.79 is 0.4x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2024-06-04,Youtube Premium,YOUTUBE PREMIUM,Entertainment & Subscriptions,5.93,?4.99 ? ?58.87,0.0943,Medium,Amount ?5.93 is 0.4x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2023-01-24,Audible UK Monthly,AUDIBLE UK MONTHLY,Entertainment & Subscriptions,5.26,?4.99 ? ?58.87,0.0939,Medium,Amount ?5.26 is 0.4x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2023-10-02,  Audible UK Monthly   ,AUDIBLE UK MONTHLY,Entertainment & Subscriptions,5.23,?4.99 ? ?58.87,0.0918,Medium,Amount ?5.23 is 0.4x typical Entertainment & Subscriptions median (?14.17). Exceeds typical ceiling of ?58.87.
+2024-02-12,  TFI Leap Card Topup   ,TFI LEAP CARD TOPUP,Transport,7.74,?2.40 ? ?63.89,0.0879,Medium,Amount ?7.74 is 0.4x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-10-23,Unknown Merchant,UNKNOWN MERCHANT,Transport,8.04,?2.40 ? ?63.89,0.0819,Medium,Amount ?8.04 is 0.4x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-12-11,FREE NOW TAXI DUBLIN,FREE NOW TAXI DUBLIN,Transport,8.22,?2.40 ? ?63.89,0.0818,Medium,Amount ?8.22 is 0.4x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-08-03,shell petrol 6353,SHELL PETROL 6353,Transport,8.26,?2.40 ? ?63.89,0.0804,Medium,Amount ?8.26 is 0.4x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-02-27,Circle K Dundalk,CIRCLE K DUNDALK,Transport,8.27,?2.40 ? ?63.89,0.0804,Medium,Amount ?8.27 is 0.4x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
+2023-05-22,DART TICKET MACHINE,DART TICKET MACHINE,Transport,8.27,?2.40 ? ?63.89,0.0804,Medium,Amount ?8.27 is 0.4x typical Transport median (?19.37). Exceeds typical ceiling of ?63.89.
